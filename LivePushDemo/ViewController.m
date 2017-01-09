@@ -69,7 +69,7 @@
 }
 - (void)videoPlayAction:(id)sender {
     LWVideoPlayViewController *vpVC=[[LWVideoPlayViewController alloc]init];
-    vpVC.playURL=[NSURL URLWithString:@"rtmp://192.168.101.222:1935/rtmplive/room1"];
+    vpVC.playURL=[NSURL URLWithString:@"rtmp://192.168.2.100:1935/rtmplive/room1"];
     vpVC.playName=@"AloesLu";
     [self.navigationController pushViewController:vpVC animated:YES];
 }

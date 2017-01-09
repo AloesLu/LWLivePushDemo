@@ -40,7 +40,17 @@
     [self.camera startCameraCapture];
     
     //  8.开始上传视频
-    [output startUploadStreamWithURL:@"rtmp://192.168.101.222:1935/rtmplive" andStreamKey:@"room1"];
+    [output startUploadStreamWithURL:@"rtmp://192.168.2.100:1935/rtmplive" andStreamKey:@"room1"];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.camera startCameraCapture];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.camera stopCameraCapture];
 }
 
 - (void)didReceiveMemoryWarning {
